@@ -1,0 +1,44 @@
+name: DEPLOY
+
+on:
+  push:
+    branches: [ release-* ]
+
+jobs:
+  CI:
+    name: Check master branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: SCM
+        uses: actions/checkout@v2
+
+      - name: Install node modules
+        run: yarn install
+
+      - name: Run lint
+        run: yarn lint
+
+      - name: Run tests
+        run: yarn test-with-coverage
+
+      - name: Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+
+      - name: Build
+        run: yarn build
+
+      - name: Read version name
+        run: |
+          echo "VERSION_NAME=$(awk '/version/{gsub(/("|",)/,"",$2);print $2}' package.json)" >> $GITHUB_ENV
+
+      - name: Commit Artifacts
+        run: |
+          echo process.env.VERSION_NAME
+#          git config --global user.name 'maximbircu'
+#          git config --global user.email 'maximbircu@users.noreply.github.com'
+#          git add --force dist/
+#          git commit -m "Added new artifacts"
+#          git push

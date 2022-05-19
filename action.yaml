@@ -1,0 +1,12 @@
+name: "PR Auto Merge Action"
+author: "Maxim Bircu"
+description: "A GH Action that helps with PR merging"
+inputs:
+  config-file-path:
+    description: 'The path to the assistant config'
+    required: false
+    default: "./default-config.json"
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
