@@ -1,0 +1,38 @@
+{
+  "name": "pull-request-auto-merge",
+  "version": "1.0.2",
+  "description": "Pull Request Auto Merge is a simple Github action that helps to automate the merging process.",
+  "author": "Maxim Bircu",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist && cp -r assets dist",
+    "clean": "rm -r dist",
+    "lint": "npx eslint src",
+    "test": "jest",
+    "test-with-coverage": "jest --coverage",
+    "release": "node scripts/release.js release",
+    "prepare-next-version": "node scripts/release.js prepare-next-version"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.1",
+    "@octokit/action": "^3.18.0",
+    "commander": "^9.2.0",
+    "json-string-formatter": "^1.0.1",
+    "jsonschema": "^1.4.1",
+    "lodash": "^4.17.21",
+    "process": "^0.11.10",
+    "string-template": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@vercel/ncc": "^0.33.3",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^28.1.0",
+    "eslint": "^8.12.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^28.0.3",
+    "jest-html-reporter": "^3.5.0"
+  }
+}
