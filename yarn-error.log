@@ -1,0 +1,48 @@
+Arguments: 
+  /opt/homebrew/Cellar/node/17.8.0/bin/node /opt/homebrew/Cellar/yarn/1.22.18/libexec/bin/yarn.js add @varcel/ncc
+
+PATH: 
+  /Users/mbircu/.sdkman/candidates/maven/current/bin:/Users/mbircu/.sdkman/candidates/kscript/current/bin:/Users/mbircu/.sdkman/candidates/kotlin/current/bin:/Users/mbircu/.sdkman/candidates/java/current/bin:/Users/mbircu/.sdkman/candidates/groovy/current/bin:/Users/mbircu/.sdkman/candidates/gradle/current/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mbircu/Library/Android/sdk/tools:/Users/mbircu/Library/Android/sdk/platform-tools:/Users/mbircu/Library/Application Support/JetBrains/Toolbox/scripts:/Library/Apple/usr/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  17.8.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@varcel%2fncc: Not found
+      at Request.params.callback [as _callback] (/opt/homebrew/Cellar/yarn/1.22.18/libexec/lib/cli.js:66138:18)
+      at Request.self.callback (/opt/homebrew/Cellar/yarn/1.22.18/libexec/lib/cli.js:140883:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.18/libexec/lib/cli.js:141855:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (/opt/homebrew/Cellar/yarn/1.22.18/libexec/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "pull-request-auto-merge",
+    "version": "1.0.0",
+    "description": "Pull Request Auto Merge is a simple Github action that helps to automate the merging process.",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Maxim Bircu",
+    "license": "MIT",
+    "dependencies": {
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

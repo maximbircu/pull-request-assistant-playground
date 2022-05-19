@@ -1,0 +1,13 @@
+friday -h
+
+Usage: friday [options] [command]
+
+Options:
+  -h, --help       display help for command
+
+Commands:
+  merge [options]  Will merge the PR
+  help [command]   display help for command
+
+
+**Executed** [_(details)_](https://github.com/maximbircu/pull-request-assistant-playground-checker/actions/runs/2354264182) 🟢
