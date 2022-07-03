@@ -1,6 +1,6 @@
 {
   "name": "pull-request-auto-merge",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Pull Request Auto Merge is a simple Github action that helps to automate the merging process.",
   "author": "Maxim Bircu",
   "license": "MIT",
